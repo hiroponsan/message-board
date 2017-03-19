@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   
   def index
     @message = Message.new
-    @message = Message.all
+    @messages = Message.all
   end
   
   def create 
@@ -13,7 +13,7 @@ class MessagesController < ApplicationController
   
   private
   def message_params
-    params.require(:messge).permit(:name, :body)
+    params.require(:message).permit(:name, :body)
   end
   
     
